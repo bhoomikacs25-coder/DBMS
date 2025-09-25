@@ -1,0 +1,34 @@
+show databases;
+
+create database IF NOT exists BHOOMIKA;
+
+show databases;
+
+use BHOOMIKA;
+
+CREATE TABLE STUDENT (stdid INT(5), stdname varchar(20), dob date,
+doj date, fee INT(5), gender char );
+
+DESC STUDENT;
+
+INSERT INTO STUDENT ( stdid, stdname, dob, doj, fee, gender)
+VALUES (1, 'BHOOMIKA', '2006-04-02', '2001-10-05', 10000, 'F');
+
+INSERT INTO STUDENT ( stdid, stdname, dob, doj, fee, gender)
+VALUES (2, 'B RUCHITHA', '2006-05-02', '2001-10-26', 11000, 'F');
+ALTER TABLE STUDENT ADD PHONE_NO numeric(10);
+ALTER TABLE STUDENT
+RENAME COLUMN PHONE_NO TO STUDENT_NO;
+SELECT * FROM STUDENT;
+ALTER TABLE student DROP COLUMN gender;
+
+SELECT * FROM STUDENT;
+
+ALTER TABLE STUDENT RENAME TO STUDENT_INFO;
+
+DELETE FROM STUDENT_INFO WHERE STDID = 2;
+
+SELECT * FROM STUDENT_INFO;
+
+
+
